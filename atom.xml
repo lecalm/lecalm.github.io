@@ -5,9 +5,9 @@
   <subtitle>一枚程序猿的修炼屋</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://jack_hou.com/"/>
-  <updated>2020-04-06T12:09:59.206Z</updated>
-  <id>http://jack_hou.com/</id>
+  <link href="https://github.com/lecalm/"/>
+  <updated>2020-04-06T12:24:35.557Z</updated>
+  <id>https://github.com/lecalm/</id>
   
   <author>
     <name>Jack Hou</name>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>hexo博客搭建初探</title>
-    <link href="http://jack_hou.com/2020/04/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%88%9D%E6%8E%A2/"/>
-    <id>http://jack_hou.com/2020/04/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%88%9D%E6%8E%A2/</id>
+    <link href="https://github.com/lecalm/2020/04/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%88%9D%E6%8E%A2/"/>
+    <id>https://github.com/lecalm/2020/04/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%88%9D%E6%8E%A2/</id>
     <published>2020-04-06T09:09:19.000Z</published>
-    <updated>2020-04-06T12:09:59.206Z</updated>
+    <updated>2020-04-06T12:24:35.557Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="HEXO从零开始"><a href="#HEXO从零开始" class="headerlink" title="HEXO从零开始"></a>HEXO从零开始</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>1、<a href="www.nodejs.org">安装Node.js</a><br>2、cnpm国外安装源较慢，因此改变安装源<br>‘npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org&#39;" target="_blank" rel="noopener">https://registry.npm.taobao.org&#39;</a></p><h2 id="安装hexo-cli博客框架"><a href="#安装hexo-cli博客框架" class="headerlink" title="安装hexo-cli博客框架"></a>安装hexo-cli博客框架</h2><p>1、在命令行模式输入’cnpm intall -g hexo-cli’<br>2、在命令行模式输入’hexo -v’验证安装是否成功</p><a id="more"></a><h2 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h2><p>1、例如，笔者博客工作在E盘，因此在E盘，使用命令行’mkdir blog’，<br>2、进入到<strong>blog</strong> ‘cd blog’,</p><h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><p>1、在<strong>blog</strong>路径下输入’hexo init’初始化博客，<br>2、接下来输入如下命令：<br>‘’’<br> hexo s //启动博客<br> hexo n “我的第一篇博客文章” //创建文章<br>‘’’<br>3、生成第一篇博客后，可在<em>/blog/source/_posts</em>路径下查看文件，<br>4、接下来使用命令<br>‘’’<br>hexo clean //清理目录<br>hexo g<br>hexo s //重新启动博客<br>‘’’</p><h2 id="将博客部署到远端-本文以部署到github为例"><a href="#将博客部署到远端-本文以部署到github为例" class="headerlink" title="将博客部署到远端(本文以部署到github为例)"></a>将博客部署到远端(本文以部署到github为例)</h2><p>1、在github上<em>new repository</em>,其中Respository name必须为“lecalm.github.io”格式,即<em>/“用户名.github.io”</em>的格式。<br><img src="/.com//github.jpg" alt="创建格式"><br>2、在<em>blog</em>目录下安装<em>git</em>插件<br>‘cnpm install –save hexo-deployer-git’<br>3、设置blog目录下的_config.yml文件<br>‘’’<br>deploy:<br>  type: git<br>  repo: <a href="https://github.com/lecalm/lecalm.github.io.git" target="_blank" rel="noopener">https://github.com/lecalm/lecalm.github.io.git</a><br>  branch: master<br>‘’’<br>4、部署到远端<br>‘hexo d’</p><h1 id="这样，hexo部署博客就部署成功啦！！！"><a href="#这样，hexo部署博客就部署成功啦！！！" class="headerlink" title="这样，hexo部署博客就部署成功啦！！！"></a><strong>这样，hexo部署博客就部署成功啦！！！</strong></h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="HEXO从零开始"><a href="#HEXO从零开始" class="headerlink" title="HEXO从零开始"></a>HEXO从零开始</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>1、<a href="www.nodejs.org">安装Node.js</a><br>2、cnpm国外安装源较慢，因此改变安装源<br>‘npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org&#39;" target="_blank" rel="noopener">https://registry.npm.taobao.org&#39;</a></p><h2 id="安装hexo-cli博客框架"><a href="#安装hexo-cli博客框架" class="headerlink" title="安装hexo-cli博客框架"></a>安装hexo-cli博客框架</h2><p>1、在命令行模式输入’cnpm intall -g hexo-cli’<br>2、在命令行模式输入’hexo -v’验证安装是否成功</p><a id="more"></a><h2 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h2><p>1、例如，笔者博客工作在E盘，因此在E盘，使用命令行’mkdir blog’，<br>2、进入到<strong>blog</strong> ‘cd blog’,</p><h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><p>1、在<strong>blog</strong>路径下输入’hexo init’初始化博客，<br>2、接下来输入如下命令：<br>‘’’<br> hexo s //启动博客<br> hexo n “我的第一篇博客文章” //创建文章<br>‘’’<br>3、生成第一篇博客后，可在<em>/blog/source/_posts</em>路径下查看文件，<br>4、接下来使用命令<br>‘’’<br>hexo clean //清理目录<br>hexo g<br>hexo s //重新启动博客<br>‘’’</p><h2 id="将博客部署到远端-本文以部署到github为例"><a href="#将博客部署到远端-本文以部署到github为例" class="headerlink" title="将博客部署到远端(本文以部署到github为例)"></a>将博客部署到远端(本文以部署到github为例)</h2><p>1、在github上<em>new repository</em>,其中Respository name必须为“lecalm.github.io”格式,即<em>/“用户名.github.io”</em>的格式。</p><img src="/2020/04/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%88%9D%E6%8E%A2/github.jpg" class title="This is an example image"><p>2、在<em>blog</em>目录下安装<em>git</em>插件<br>‘cnpm install –save hexo-deployer-git’<br>3、设置blog目录下的_config.yml文件<br>‘’’<br>deploy:<br>  type: git<br>  repo: <a href="https://github.com/lecalm/lecalm.github.io.git">https://github.com/lecalm/lecalm.github.io.git</a><br>  branch: master<br>‘’’<br>4、部署到远端<br>‘hexo d’</p><h1 id="这样，hexo部署博客就部署成功啦！！！"><a href="#这样，hexo部署博客就部署成功啦！！！" class="headerlink" title="这样，hexo部署博客就部署成功啦！！！"></a><strong>这样，hexo部署博客就部署成功啦！！！</strong></h1>]]></content>
     
     <summary type="html">
     
@@ -33,17 +33,17 @@
     </summary>
     
     
-      <category term="技术" scheme="http://jack_hou.com/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://github.com/lecalm/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="hexo搭建" scheme="http://jack_hou.com/tags/hexo%E6%90%AD%E5%BB%BA/"/>
+      <category term="hexo搭建" scheme="https://github.com/lecalm/tags/hexo%E6%90%AD%E5%BB%BA/"/>
     
   </entry>
   
   <entry>
     <title>我的第一篇博客文章</title>
-    <link href="http://jack_hou.com/2020/03/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
-    <id>http://jack_hou.com/2020/03/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
+    <link href="https://github.com/lecalm/2020/03/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+    <id>https://github.com/lecalm/2020/03/31/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
     <published>2020-03-31T07:40:11.000Z</published>
     <updated>2020-04-06T08:02:49.107Z</updated>
     
@@ -61,21 +61,21 @@
     </summary>
     
     
-      <category term="随笔" scheme="http://jack_hou.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://github.com/lecalm/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="tags" scheme="http://jack_hou.com/tags/tags/"/>
+      <category term="tags" scheme="https://github.com/lecalm/tags/tags/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://jack_hou.com/2020/03/31/hello-world/"/>
-    <id>http://jack_hou.com/2020/03/31/hello-world/</id>
+    <link href="https://github.com/lecalm/2020/03/31/hello-world/"/>
+    <id>https://github.com/lecalm/2020/03/31/hello-world/</id>
     <published>2020-03-31T07:04:09.088Z</published>
     <updated>2020-03-31T07:04:09.089Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
     <summary type="html">
     
