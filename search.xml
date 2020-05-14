@@ -3,14 +3,19 @@
   <entry>
     <title>hexo博客搭建初探</title>
     <url>/2020/04/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%88%9D%E6%8E%A2/</url>
-    <content><![CDATA[<h1 id="HEXO从零开始"><a href="#HEXO从零开始" class="headerlink" title="HEXO从零开始"></a>HEXO从零开始</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>1、<a href="www.nodejs.org">安装Node.js</a><br>2、cnpm国外安装源较慢，因此改变安装源<br>‘npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org&#39;" target="_blank" rel="noopener">https://registry.npm.taobao.org&#39;</a></p>
-<h2 id="安装hexo-cli博客框架"><a href="#安装hexo-cli博客框架" class="headerlink" title="安装hexo-cli博客框架"></a>安装hexo-cli博客框架</h2><p>1、在命令行模式输入’cnpm intall -g hexo-cli’<br>2、在命令行模式输入’hexo -v’验证安装是否成功</p>
+    <content><![CDATA[<h1 id="HEXO从零开始"><a href="#HEXO从零开始" class="headerlink" title="HEXO从零开始"></a>HEXO从零开始</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>1、<a href="www.nodejs.org">安装Node.js</a><br>2、cnpm国外安装源较慢，因此改变安装源<br><code>npm install -g cnpm --registry=https://registry.npm.taobao.org&#39;</code></p>
+<h2 id="安装hexo-cli博客框架"><a href="#安装hexo-cli博客框架" class="headerlink" title="安装hexo-cli博客框架"></a>安装hexo-cli博客框架</h2><p>1、在命令行模式输入<code>cnpm intall -g hexo-cli</code><br>2、在命令行模式输入<code>hexo -v</code>验证安装是否成功</p>
 <a id="more"></a>
-<h2 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h2><p>1、例如，笔者博客工作在E盘，因此在E盘，使用命令行’mkdir blog’，<br>2、进入到<strong>blog</strong> ‘cd blog’,</p>
-<h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><p>1、在<strong>blog</strong>路径下输入’hexo init’初始化博客，<br>2、接下来输入如下命令：<br>‘’’<br> hexo s //启动博客<br> hexo n “我的第一篇博客文章” //创建文章<br>‘’’<br>3、生成第一篇博客后，可在<em>/blog/source/_posts</em>路径下查看文件，<br>4、接下来使用命令<br>‘’’<br>hexo clean //清理目录<br>hexo g<br>hexo s //重新启动博客<br>‘’’</p>
+<h2 id="新建博客"><a href="#新建博客" class="headerlink" title="新建博客"></a>新建博客</h2><p>1、例如，笔者博客工作在E盘，因此在E盘，使用命令行<code>mkdir blog</code>，<br>2、进入到<strong>blog</strong> <code>cd blog</code>,</p>
+<h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2><p>1、在<strong>blog</strong>路径下输入<code>hexo init</code>初始化博客，<br>2、接下来输入如下命令：</p>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">hexo s <span class="comment">//启动博客</span></span><br><span class="line">hexo n <span class="string">"我的第一篇博客文章"</span> <span class="comment">//创建文章</span></span><br></pre></td></tr></table></figure>
+<p>3、生成第一篇博客后，可在<em>/blog/source/_posts</em>路径下查看文件，<br>4、接下来使用命令</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">hexo</span> <span class="string">clean //清理目录</span></span><br><span class="line"><span class="attr">hexo</span> <span class="string">g </span></span><br><span class="line"><span class="attr">hexo</span> <span class="string">s //重新启动博客</span></span><br></pre></td></tr></table></figure>
 <h2 id="将博客部署到远端-本文以部署到github为例"><a href="#将博客部署到远端-本文以部署到github为例" class="headerlink" title="将博客部署到远端(本文以部署到github为例)"></a>将博客部署到远端(本文以部署到github为例)</h2><p>1、在github上<em>new repository</em>,其中Respository name必须为“lecalm.github.io”格式,即<em>/“用户名.github.io”</em>的格式。</p>
 <img src="/2020/04/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%88%9D%E6%8E%A2/github.jpg" class title="This is an example image">
-<p>2、在<em>blog</em>目录下安装<em>git</em>插件<br>‘cnpm install –save hexo-deployer-git’<br>3、设置blog目录下的_config.yml文件<br>‘’’<br>deploy:<br>  type: git<br>  repo: <a href="https://github.com/lecalm/lecalm.github.io.git">https://github.com/lecalm/lecalm.github.io.git</a><br>  branch: master<br>‘’’<br>4、部署到远端<br>‘hexo d’</p>
+<p>2、在<em>blog</em>目录下安装<em>git</em>插件<br><code>cnpm install --save hexo-deployer-git</code><br>3、设置blog目录下的_config.yml文件</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/lecalm/lecalm.github.io.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+<p>4、部署到远端<br><code>hexo d</code></p>
 <h1 id="这样，hexo部署博客就部署成功啦！！！"><a href="#这样，hexo部署博客就部署成功啦！！！" class="headerlink" title="这样，hexo部署博客就部署成功啦！！！"></a><strong>这样，hexo部署博客就部署成功啦！！！</strong></h1>]]></content>
       <categories>
         <category>技术</category>
