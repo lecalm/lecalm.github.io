@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/lecalm/"/>
-  <updated>2020-04-06T12:24:35.557Z</updated>
+  <updated>2020-05-14T12:30:37.775Z</updated>
   <id>https://github.com/lecalm/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql操作</title>
+    <link href="https://github.com/lecalm/2020/05/14/ysql%E6%93%8D%E4%BD%9C/"/>
+    <id>https://github.com/lecalm/2020/05/14/ysql%E6%93%8D%E4%BD%9C/</id>
+    <published>2020-05-14T12:19:50.000Z</published>
+    <updated>2020-05-14T12:30:37.775Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>MySql 从8.0开始修改密码有了变化，在user表加了字段authentication_string，修改密码前先检查authentication_string是否为空.</strong><br>use mysql;<br>update user set authentication_string=’’ where user=’root’;–将字段置为空<br>ALTER user ‘root’@’localhost’ IDENTIFIED BY ‘root’;–修改密码为root<br><strong>mysql5.7开启远程访问权限</strong><br>use mysql;<br>update user set host = ‘%’ where user = ‘root’; (使mysql root用户可以连接上任意的ip地址)<br>FLUSH PRIVILEGES</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;MySql 从8.0开始修改密码有了变化，在user表加了字段authentication_string，修改密码前先检查authentication_string是否为空.&lt;/strong&gt;&lt;br&gt;use mysql;&lt;br&gt;update user set
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hexo博客搭建初探</title>

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>mysql操作</title>
+    <url>/2020/05/14/ysql%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p><strong>MySql 从8.0开始修改密码有了变化，在user表加了字段authentication_string，修改密码前先检查authentication_string是否为空.</strong><br>use mysql;<br>update user set authentication_string=’’ where user=’root’;–将字段置为空<br>ALTER user ‘root’@’localhost’ IDENTIFIED BY ‘root’;–修改密码为root<br><strong>mysql5.7开启远程访问权限</strong><br>use mysql;<br>update user set host = ‘%’ where user = ‘root’; (使mysql root用户可以连接上任意的ip地址)<br>FLUSH PRIVILEGES</p>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo博客搭建初探</title>
     <url>/2020/04/06/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%88%9D%E6%8E%A2/</url>
     <content><![CDATA[<h1 id="HEXO从零开始"><a href="#HEXO从零开始" class="headerlink" title="HEXO从零开始"></a>HEXO从零开始</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>1、<a href="www.nodejs.org">安装Node.js</a><br>2、cnpm国外安装源较慢，因此改变安装源<br>‘npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org&#39;" target="_blank" rel="noopener">https://registry.npm.taobao.org&#39;</a></p>
