@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/lecalm/"/>
-  <updated>2020-05-14T12:30:37.775Z</updated>
+  <updated>2020-05-14T12:45:26.408Z</updated>
   <id>https://github.com/lecalm/</id>
   
   <author>
@@ -17,24 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>mysql操作</title>
-    <link href="https://github.com/lecalm/2020/05/14/ysql%E6%93%8D%E4%BD%9C/"/>
-    <id>https://github.com/lecalm/2020/05/14/ysql%E6%93%8D%E4%BD%9C/</id>
+    <title>MySQL操作</title>
+    <link href="https://github.com/lecalm/2020/05/14/mysql%E6%93%8D%E4%BD%9C/"/>
+    <id>https://github.com/lecalm/2020/05/14/mysql%E6%93%8D%E4%BD%9C/</id>
     <published>2020-05-14T12:19:50.000Z</published>
-    <updated>2020-05-14T12:30:37.775Z</updated>
+    <updated>2020-05-14T12:45:26.408Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>MySql 从8.0开始修改密码有了变化，在user表加了字段authentication_string，修改密码前先检查authentication_string是否为空.</strong><br>use mysql;<br>update user set authentication_string=’’ where user=’root’;–将字段置为空<br>ALTER user ‘root’@’localhost’ IDENTIFIED BY ‘root’;–修改密码为root<br><strong>mysql5.7开启远程访问权限</strong><br>use mysql;<br>update user set host = ‘%’ where user = ‘root’; (使mysql root用户可以连接上任意的ip地址)<br>FLUSH PRIVILEGES</p>]]></content>
+    <content type="html"><![CDATA[<p><strong>MySql 从8.0开始修改密码有了变化，在user表加了字段authentication_string，修改密码前先检查authentication_string是否为空.</strong> </p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use mysql;  </span><br><span class="line">update<span class="built_in"> user </span><span class="builtin-name">set</span> <span class="attribute">authentication_string</span>=<span class="string">''</span> where <span class="attribute">user</span>=<span class="string">'root'</span>;#--将字段置为空  </span><br><span class="line">ALTER<span class="built_in"> user </span><span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'root'</span>;--修改密码为root</span><br></pre></td></tr></table></figure><p><strong>mysql5.7开启远程访问权限</strong>  </p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">use mysql;  </span><br><span class="line">update<span class="built_in"> user </span><span class="builtin-name">set</span> host = <span class="string">'%'</span> where<span class="built_in"> user </span>= <span class="string">'root'</span>; #(使mysql root用户可以连接上任意的ip地址) </span><br><span class="line">FLUSH PRIVILEGES</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt;MySql 从8.0开始修改密码有了变化，在user表加了字段authentication_string，修改密码前先检查authentication_string是否为空.&lt;/strong&gt;&lt;br&gt;use mysql;&lt;br&gt;update user set
+        &lt;p&gt;&lt;strong&gt;MySql 从8.0开始修改密码有了变化，在user表加了字段authentication_string，修改密码前先检查authentication_string是否为空.&lt;/strong&gt; &lt;/p&gt;
+&lt;figure class=&quot;highlight ro
       
     
     </summary>
     
     
+      <category term="技术" scheme="https://github.com/lecalm/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="mysql" scheme="https://github.com/lecalm/tags/mysql/"/>
     
   </entry>
   
