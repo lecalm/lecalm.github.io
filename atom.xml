@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/lecalm/"/>
-  <updated>2020-05-21T12:52:19.379Z</updated>
+  <updated>2020-05-22T03:51:21.390Z</updated>
   <id>https://github.com/lecalm/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java bitCount源码解析</title>
+    <link href="https://github.com/lecalm/2020/05/22/Java-bitCount%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/"/>
+    <id>https://github.com/lecalm/2020/05/22/Java-bitCount%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</id>
+    <published>2020-05-22T03:27:40.000Z</published>
+    <updated>2020-05-22T03:51:21.390Z</updated>
+    
+    <content type="html"><![CDATA[<p>bitCount源码：  </p><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> static <span class="built_in">int</span> bitCount(<span class="built_in">int</span> i) &#123;</span><br><span class="line">        <span class="comment">// HD, Figure 5-2</span></span><br><span class="line">        i = i - ((i &gt;&gt;&gt; <span class="number">1</span>) &amp; <span class="number">0x55555555</span>);</span><br><span class="line">        i = (i &amp; <span class="number">0x33333333</span>) + ((i &gt;&gt;&gt; <span class="number">2</span>) &amp; <span class="number">0x33333333</span>);</span><br><span class="line">        i = (i + (i &gt;&gt;&gt; <span class="number">4</span>)) &amp; <span class="number">0x0f0f0f0f</span>;</span><br><span class="line">        i = i + (i &gt;&gt;&gt; <span class="number">8</span>);</span><br><span class="line">        i = i + (i &gt;&gt;&gt; <span class="number">16</span>);  </span><br><span class="line">        <span class="keyword">return</span> i &amp; <span class="number">0x3f</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><p>函数功能说明：技术整型i二进制表示中1的个数。<br>具体源码解析过程:<a href="https://blog.csdn.net/zhouzipeng000/article/details/56676885" target="_blank" rel="noopener"><font red="yellow">源码解析</font></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;bitCount源码：  &lt;/p&gt;
+&lt;figure class=&quot;highlight angelscript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;li
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://github.com/lecalm/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Java源码" scheme="https://github.com/lecalm/tags/Java%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
   
   <entry>
     <title>Servlet配置</title>
