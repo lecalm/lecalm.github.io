@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Servlet配置</title>
+    <url>/2020/05/21/Servlet%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>在web.xml配置  </p>
+<pre><code>&lt;!--配置Servlet--&gt;
+    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;
+         version=&quot;3.1&quot;&gt;
+    &lt;!--配置Servlet--&gt;
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;demo1&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;com.le.web.ser.MyServerlet&lt;/servlet-class&gt;
+        &lt;!--
+            指定Servlet的创建时机，（默认情况，第一次被访问时，Servlet被创建）
+                1、第一次被访问时创建
+                    *&lt;load-on-startup&gt;&lt;/load-on-startup&gt;的值为负值
+                2、在服务器启动时创建
+                    *&lt;load-on-startup&gt;&lt;/load-on-startup&gt;的值为0或者正数
+        --&gt;
+        &lt;load-on-startup&gt;&lt;/load-on-startup&gt;
+    &lt;/servlet&gt;
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;demo1&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/demo1&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+</code></pre><a id="more"></a>
+<h2 id="执行原理："><a href="#执行原理：" class="headerlink" title="执行原理："></a>执行原理：</h2><h3 id="1、当服务器受到客户端浏览器的请求后，会解析请求URL路径，获取访问的Servlet的资源路径"><a href="#1、当服务器受到客户端浏览器的请求后，会解析请求URL路径，获取访问的Servlet的资源路径" class="headerlink" title="1、当服务器受到客户端浏览器的请求后，会解析请求URL路径，获取访问的Servlet的资源路径"></a>1、当服务器受到客户端浏览器的请求后，会解析请求URL路径，获取访问的Servlet的资源路径</h3><h3 id="2、查找web-xml文件，是否有对应的的标签体内容"><a href="#2、查找web-xml文件，是否有对应的的标签体内容" class="headerlink" title="2、查找web.xml文件，是否有对应的的标签体内容"></a>2、查找web.xml文件，是否有对应的<url-pattern>的标签体内容</url-pattern></h3><h3 id="3、如果有，则在找到对应的全类名"><a href="#3、如果有，则在找到对应的全类名" class="headerlink" title="3、如果有，则在找到对应的全类名"></a>3、如果有，则在找到对应的<servlet-class>全类名</servlet-class></h3><h3 id="4、tomact会将字节码文件加载进内存，并且创建其对象"><a href="#4、tomact会将字节码文件加载进内存，并且创建其对象" class="headerlink" title="4、tomact会将字节码文件加载进内存，并且创建其对象"></a>4、tomact会将字节码文件加载进内存，并且创建其对象</h3><h3 id="5、调用其方法"><a href="#5、调用其方法" class="headerlink" title="5、调用其方法"></a>5、调用其方法</h3><h2 id="Servlet的生命周期方法："><a href="#Servlet的生命周期方法：" class="headerlink" title="Servlet的生命周期方法："></a>Servlet的生命周期方法：</h2><h3 id="1、被创建时，执行init方法，只执行一次"><a href="#1、被创建时，执行init方法，只执行一次" class="headerlink" title="1、被创建时，执行init方法，只执行一次"></a>1、被创建时，执行init方法，只执行一次</h3><pre><code>*Servlet的init方法，只执行一次，说明一个Servlet在内存中只存在一个对象，Servlet**是单例的**。
+    *多个用户同时访问时，可能存在线程安全问题。
+    *解决：尽量不要在Servlet中定义成员变量。即使定义了成员变量，也不要修改其值。</code></pre><h3 id="2、提供服务，执行service方法，执行多次"><a href="#2、提供服务，执行service方法，执行多次" class="headerlink" title="2、提供服务，执行service方法，执行多次"></a>2、提供服务，执行service方法，执行多次</h3><pre><code>*每次访问Servlet时，Service方法都会被调用一次</code></pre><h3 id="3、被销毁，执行destroy方法，只执行一次"><a href="#3、被销毁，执行destroy方法，只执行一次" class="headerlink" title="3、被销毁，执行destroy方法，只执行一次"></a>3、被销毁，执行destroy方法，只执行一次</h3><pre><code>*Servlet被销毁时执行。服务器关闭时，Servlet被销毁。
+*只有服务器正常关闭时，才会执行destroy方法。</code></pre>]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Servlet</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java bitCount源码解析</title>
     <url>/2020/05/22/Java-bitCount%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</url>
     <content><![CDATA[<p>bitCount源码：  </p>
@@ -57,43 +97,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Servlet配置</title>
-    <url>/2020/05/21/Servlet%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>在web.xml配置  </p>
-<pre><code>&lt;!--配置Servlet--&gt;
-    &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;web-app xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
-         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;
-         version=&quot;3.1&quot;&gt;
-    &lt;!--配置Servlet--&gt;
-    &lt;servlet&gt;
-        &lt;servlet-name&gt;demo1&lt;/servlet-name&gt;
-        &lt;servlet-class&gt;com.le.web.ser.MyServerlet&lt;/servlet-class&gt;
-        &lt;!--
-            指定Servlet的创建时机，（默认情况，第一次被访问时，Servlet被创建）
-                1、第一次被访问时创建
-                    *&lt;load-on-startup&gt;&lt;/load-on-startup&gt;的值为负值
-                2、在服务器启动时创建
-                    *&lt;load-on-startup&gt;&lt;/load-on-startup&gt;的值为0或者正数
-        --&gt;
-        &lt;load-on-startup&gt;&lt;/load-on-startup&gt;
-    &lt;/servlet&gt;
-    &lt;servlet-mapping&gt;
-        &lt;servlet-name&gt;demo1&lt;/servlet-name&gt;
-        &lt;url-pattern&gt;/demo1&lt;/url-pattern&gt;
-    &lt;/servlet-mapping&gt;
-&lt;/web-app&gt;
-</code></pre><a id="more"></a>
-<h2 id="执行原理："><a href="#执行原理：" class="headerlink" title="执行原理："></a>执行原理：</h2><h3 id="1、当服务器受到客户端浏览器的请求后，会解析请求URL路径，获取访问的Servlet的资源路径"><a href="#1、当服务器受到客户端浏览器的请求后，会解析请求URL路径，获取访问的Servlet的资源路径" class="headerlink" title="1、当服务器受到客户端浏览器的请求后，会解析请求URL路径，获取访问的Servlet的资源路径"></a>1、当服务器受到客户端浏览器的请求后，会解析请求URL路径，获取访问的Servlet的资源路径</h3><h3 id="2、查找web-xml文件，是否有对应的的标签体内容"><a href="#2、查找web-xml文件，是否有对应的的标签体内容" class="headerlink" title="2、查找web.xml文件，是否有对应的的标签体内容"></a>2、查找web.xml文件，是否有对应的<url-pattern>的标签体内容</url-pattern></h3><h3 id="3、如果有，则在找到对应的全类名"><a href="#3、如果有，则在找到对应的全类名" class="headerlink" title="3、如果有，则在找到对应的全类名"></a>3、如果有，则在找到对应的<servlet-class>全类名</servlet-class></h3><h3 id="4、tomact会将字节码文件加载进内存，并且创建其对象"><a href="#4、tomact会将字节码文件加载进内存，并且创建其对象" class="headerlink" title="4、tomact会将字节码文件加载进内存，并且创建其对象"></a>4、tomact会将字节码文件加载进内存，并且创建其对象</h3><h3 id="5、调用其方法"><a href="#5、调用其方法" class="headerlink" title="5、调用其方法"></a>5、调用其方法</h3><h2 id="Servlet的生命周期方法："><a href="#Servlet的生命周期方法：" class="headerlink" title="Servlet的生命周期方法："></a>Servlet的生命周期方法：</h2><h3 id="1、被创建时，执行init方法，只执行一次"><a href="#1、被创建时，执行init方法，只执行一次" class="headerlink" title="1、被创建时，执行init方法，只执行一次"></a>1、被创建时，执行init方法，只执行一次</h3><pre><code>*Servlet的init方法，只执行一次，说明一个Servlet在内存中只存在一个对象，Servlet**是单例的**。
-    *多个用户同时访问时，可能存在线程安全问题。
-    *解决：尽量不要在Servlet中定义成员变量。即使定义了成员变量，也不要修改其值。</code></pre><h3 id="2、提供服务，执行service方法，执行多次"><a href="#2、提供服务，执行service方法，执行多次" class="headerlink" title="2、提供服务，执行service方法，执行多次"></a>2、提供服务，执行service方法，执行多次</h3><pre><code>*每次访问Servlet时，Service方法都会被调用一次</code></pre><h3 id="3、被销毁，执行destroy方法，只执行一次"><a href="#3、被销毁，执行destroy方法，只执行一次" class="headerlink" title="3、被销毁，执行destroy方法，只执行一次"></a>3、被销毁，执行destroy方法，只执行一次</h3><pre><code>*Servlet被销毁时执行。服务器关闭时，Servlet被销毁。
-*只有服务器正常关闭时，才会执行destroy方法。</code></pre>]]></content>
+    <title>java ArrayList踩坑笔记</title>
+    <url>/2020/06/06/java-ArrayList%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="List与数组的相互转化"><a href="#List与数组的相互转化" class="headerlink" title="List与数组的相互转化"></a>List与数组的相互转化</h1><ul>
+<li><pre><code>ArrayList&lt;Integer&gt; a=new ArrayList&lt;Integer&gt;();
+int[] array=(int[])a.toArray(new int[size]);//会报错   
+则会报错，这是因为int[]并不等同于Integer[]。因此如果换成Integer[]数组，则能正确运行。  
+List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();  
+list.add(1);  
+list.add(2);  
+Integer[] array = list.toArray(new Integer[list.size()]);//能正确运行
+</code></pre></li>
+</ul>
+<pre><code></code></pre>]]></content>
       <categories>
         <category>技术</category>
       </categories>
       <tags>
-        <tag>Servlet</tag>
+        <tag>Java源码</tag>
       </tags>
   </entry>
 </search>
