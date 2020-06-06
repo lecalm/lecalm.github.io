@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/lecalm/"/>
-  <updated>2020-06-06T02:48:29.996Z</updated>
+  <updated>2020-06-06T02:51:05.744Z</updated>
   <id>https://github.com/lecalm/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/lecalm/2020/06/06/java-ArrayList%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/"/>
     <id>https://github.com/lecalm/2020/06/06/java-ArrayList%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/</id>
     <published>2020-06-06T02:43:15.000Z</published>
-    <updated>2020-06-06T02:48:29.996Z</updated>
+    <updated>2020-06-06T02:51:05.744Z</updated>
     
     <content type="html"><![CDATA[<h1 id="List与数组的相互转化"><a href="#List与数组的相互转化" class="headerlink" title="List与数组的相互转化"></a>List与数组的相互转化</h1><ul><li><pre><code>ArrayList&lt;Integer&gt; a=new ArrayList&lt;Integer&gt;();int[] array=(int[])a.toArray(new int[size]);//会报错   则会报错，这是因为int[]并不等同于Integer[]。因此如果换成Integer[]数组，则能正确运行。  List&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();  list.add(1);  list.add(2);  Integer[] array = list.toArray(new Integer[list.size()]);//能正确运行</code></pre></li></ul><pre><code></code></pre>]]></content>
     
@@ -39,7 +39,7 @@
       <category term="技术" scheme="https://github.com/lecalm/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Java源码" scheme="https://github.com/lecalm/tags/Java%E6%BA%90%E7%A0%81/"/>
+      <category term="Java类" scheme="https://github.com/lecalm/tags/Java%E7%B1%BB/"/>
     
   </entry>
   
