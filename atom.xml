@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/lecalm/"/>
-  <updated>2020-06-06T02:51:05.744Z</updated>
+  <updated>2020-06-07T07:49:47.133Z</updated>
   <id>https://github.com/lecalm/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>异或操作</title>
+    <link href="https://github.com/lecalm/2020/06/07/%E5%BC%82%E6%88%96%E6%93%8D%E4%BD%9C/"/>
+    <id>https://github.com/lecalm/2020/06/07/%E5%BC%82%E6%88%96%E6%93%8D%E4%BD%9C/</id>
+    <published>2020-06-07T07:41:08.000Z</published>
+    <updated>2020-06-07T07:49:47.133Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>两个操作数的位中，相同则结果为0，不同则结果为1.  </li><li>按位异或的3个特点:<br>(1) 0^0=0,0^1=1  0异或任何数＝任何数<br>(2) 1^0=1,1^1=0  1异或任何数－任何数取反<br>(3) 任何数异或自己＝把自己置0  </li><li>下面这题就用到了异或操作解决<a href="https://leetcode.com/problems/swap-salary/description/" target="_blank" rel="noopener">数据库取反</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;两个操作数的位中，相同则结果为0，不同则结果为1.  &lt;/li&gt;
+&lt;li&gt;按位异或的3个特点:&lt;br&gt;(1) 0^0=0,0^1=1  0异或任何数＝任何数&lt;br&gt;(2) 1^0=1,1^1=0  1异或任何数－任何数取反&lt;br&gt;(3) 任何数异或自己＝把自己置
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://github.com/lecalm/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="计算机基础" scheme="https://github.com/lecalm/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>java ArrayList踩坑笔记</title>
